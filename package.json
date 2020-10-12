@@ -1,0 +1,28 @@
+{
+  "name": "umbraltaskserver",
+  "version": "1.0.0",
+  "description": "Umbral API for UmbralTask",
+  "main": "index.js",
+  "scripts": {
+    "start": "node .",
+    "dev": "nodemon ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luisangelq/UmbralTaskServer.git"
+  },
+  "author": "luisangel.123 <luisangelq3673@gmail.com> (https://www.npmjs.com/~luisangel.123)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luisangelq/UmbralTaskServer/issues"
+  },
+  "homepage": "https://github.com/luisangelq/UmbralTaskServer#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.9"
+  }
+}
