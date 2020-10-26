@@ -11,7 +11,7 @@ app.use(cors());
 
 app.use( express.json({ extended: true }));
 
-const port = process.env.PORT || 4000;
+const port = process.env.port || 4000;
 
 //import routes:
 app.use("/api/users", require("./routes/users"));
@@ -21,5 +21,5 @@ app.use("/api/tasks", require("./routes/tasks"));
 
 
 app.listen(port, "0.0.0.0", () => {
-    console.log(`Server is Working at ${PORT} port`);
+    console.log(`Server is Working at ${port} port`);
 })
