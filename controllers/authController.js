@@ -43,7 +43,7 @@ exports.authUser = async (req, res) => {
 
         //msg confirm
         res.json({ token: token });
-        console.log("Todo correcto");
+        console.log("Everything is ok");
       }
     );
 
@@ -60,5 +60,5 @@ exports.authenticatedUser = async (req, res) => {
   } catch (error) {
     console.log(error);
     res.status(500).json({msg: "there was an error"});
-  }
+  } 
 }

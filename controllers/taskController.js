@@ -9,10 +9,9 @@ exports.createTask = async (req, res) => {
     return res.status(400).json({ errors: errors.array() });
   }
 
-  
-
   try {
     const { belongsProject } = req.body;
+    
 
       const projectTask = await Project.findById(belongsProject);
       if(!projectTask) {
@@ -34,8 +33,9 @@ exports.createTask = async (req, res) => {
 
 exports.getTask = async (req, res) => {
     try {
-        const { belongsProject } = req.body;
+        const { belongsProject } = req.query;
     
+        console.log(req.query);
           const projectTask = await Project.findById(belongsProject);
           if(!projectTask) {
             return res.status(404).json({ msg: "project not found" });
@@ -73,9 +73,7 @@ exports.updateTask = async (req, res) => {
 
           //update
           const newTask = {};
-          if(name) {
             newTask.name = name;
-          }
             newTask.state = state;
     
 
@@ -92,7 +90,7 @@ exports.updateTask = async (req, res) => {
 
 exports.deleteTask = async (req, res) => {
     try {
-        const { belongsProject } = req.body;
+        const { belongsProject } = req.query;
 
         //If task exist
         let task = await Task.findById(req.params.id);
