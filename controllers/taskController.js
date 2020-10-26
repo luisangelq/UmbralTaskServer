@@ -34,8 +34,6 @@ exports.createTask = async (req, res) => {
 exports.getTask = async (req, res) => {
     try {
         const { belongsProject } = req.query;
-    
-        console.log(req.query);
           const projectTask = await Project.findById(belongsProject);
           if(!projectTask) {
             return res.status(404).json({ msg: "project not found" });
